@@ -1,12 +1,3 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <div>heelo world</div>
-  }
-])
 function App() {
   return (
     <>
@@ -15,4 +6,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;   

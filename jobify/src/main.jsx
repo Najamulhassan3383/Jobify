@@ -3,11 +3,16 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HomeLayout, DashboardLayout, Error, Landing } from "./pages";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>heelo world</div>,
+    element: <Landing />,
+  },
+  {
+    path: "/home",
+    element: <HomeLayout />,
   },
 ]);
 
