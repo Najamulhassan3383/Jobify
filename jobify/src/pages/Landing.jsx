@@ -25,7 +25,7 @@ function Landing() {
             Register
           </Link>
           <Link
-            to="/login"
+            to="login"
             className="bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-6 py-3 rounded-md mr-6"
           >
             Login / Demo User
