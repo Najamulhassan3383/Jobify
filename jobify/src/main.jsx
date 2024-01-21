@@ -8,11 +8,14 @@ import { HomeLayout, DashboardLayout, Error, Landing } from "./pages";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Landing />,
-  },
-  {
-    path: "/home",
     element: <HomeLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <Landing />,
+      },
+    ],
   },
 ]);
 
