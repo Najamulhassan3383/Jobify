@@ -28,21 +28,24 @@ function DashboardLayout() {
         toggleSideBar,
         isDarkTheme,
         toogleDarkTheme,
+        setShowSideBar,
       }}
     >
       <Wrapper>
-        <main className="dashboard">
-          <SmallSideBar />
-          <BigSideBar />
-
-          <div>
-            <Navbar />
-            <div className="dashboard-content">
-              Dashboard content
-              <Outlet />
-            </div>
+        <div className="grid grid-cols-1 border-none lg:grid-cols-[auto_1fr] ">
+          <div className="">
+            {showSideBar ? (
+              <>
+                <SmallSideBar />
+                <BigSideBar />
+              </>
+            ) : null}
           </div>
-        </main>
+          <div className="">
+            <Navbar />
+            <Outlet />
+          </div>
+        </div>
       </Wrapper>
     </DashboardContext.Provider>
   );

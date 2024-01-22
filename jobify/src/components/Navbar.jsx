@@ -3,6 +3,7 @@ import Wrapper from "../assets/wrappers/Navbar.js";
 import { FaAlignLeft } from "react-icons/fa";
 import Logo from "./Logo.jsx";
 import { useDashboardContext } from "../pages/DashboardLayout.jsx";
+import DropDown from "./DropDown.jsx";
 function Navbar() {
   const { toggleSideBar } = useDashboardContext();
   return (
@@ -15,7 +16,7 @@ function Navbar() {
           <Logo />
           <h4 className="logo-text">dashboard</h4>
         </div>
-        <div className="btn-container">tooggle/logout</div>
+        <DropDown />
       </div>
     </Wrapper>
   );
