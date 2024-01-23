@@ -10,6 +10,7 @@ import {
   Landing,
   Register,
   Login,
+  AddJob,
 } from "./pages";
 
 const router = createBrowserRouter([
@@ -19,8 +20,14 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        index: true,
+        path: "/",
         element: <DashboardLayout />,
+        children: [
+          {
+            path: "/",
+            element: <AddJob />,
+          },
+        ],
       },
       {
         path: "login",
