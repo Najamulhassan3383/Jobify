@@ -41,7 +41,7 @@ function DashboardLayout() {
               </>
             ) : null}
           </div>
-          <div className="">
+          <div className="h-full">
             <Navbar />
             <Outlet />
           </div>
