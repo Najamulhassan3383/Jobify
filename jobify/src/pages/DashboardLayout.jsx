@@ -31,22 +31,20 @@ function DashboardLayout() {
         setShowSideBar,
       }}
     >
-      <Wrapper>
-        <div className="grid grid-cols-1 border-none lg:grid-cols-[auto_1fr] ">
-          <div className="">
-            {showSideBar ? (
-              <>
-                <SmallSideBar />
-                <BigSideBar />
-              </>
-            ) : null}
-          </div>
-          <div className="h-full">
-            <Navbar />
-            <Outlet />
-          </div>
+      <div className="grid grid-cols-1 border-none lg:grid-cols-[auto_1fr]  ">
+        <div className="">
+          {showSideBar ? (
+            <>
+              <SmallSideBar />
+              <BigSideBar />
+            </>
+          ) : null}
         </div>
-      </Wrapper>
+        <div>
+          <Navbar />
+          <Outlet />
+        </div>
+      </div>
     </DashboardContext.Provider>
   );
 }
